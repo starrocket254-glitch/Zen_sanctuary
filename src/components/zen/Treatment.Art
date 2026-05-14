@@ -1,0 +1,112 @@
+// Abstract SVG illustrations for the six rituals.
+// Warm, organic, tonal. Never photographic.
+type Props = { className?: string };
+
+export function ArtStone({ className }: Props) {
+  return (
+    <svg viewBox="0 0 400 300" className={className} preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="400" height="300" fill="var(--sage)" />
+      <g opacity="0.9">
+        <ellipse cx="160" cy="190" rx="78" ry="34" fill="#c8c0b4" />
+        <ellipse cx="220" cy="155" rx="62" ry="26" fill="#b8b0a4" />
+        <ellipse cx="190" cy="125" rx="48" ry="20" fill="#a8a094" />
+      </g>
+      <path d="M 90 230 Q 200 250 310 228" stroke="var(--gold)" strokeWidth="1" fill="none" opacity="0.45" />
+      <path d="M 110 240 Q 200 256 290 240" stroke="var(--gold)" strokeWidth="0.8" fill="none" opacity="0.3" />
+      <text x="20" y="282" fontFamily="var(--mono)" fontSize="9" letterSpacing="0.25em" fill="var(--mid)" opacity="0.5">001 · STONE</text>
+    </svg>
+  );
+}
+
+export function ArtBloom({ className }: Props) {
+  return (
+    <svg viewBox="0 0 400 300" className={className} preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="400" height="300" fill="var(--bg3)" />
+      <defs>
+        <filter id="soft"><feGaussianBlur stdDeviation="1" /></filter>
+      </defs>
+      <g transform="translate(200 150)" filter="url(#soft)">
+        <ellipse cx="0" cy="-58" rx="32" ry="56" fill="#e8d5b8" opacity="0.85" transform="rotate(0)" />
+        <ellipse cx="55" cy="-18" rx="28" ry="52" fill="#e8d5b8" opacity="0.8" transform="rotate(72)" />
+        <ellipse cx="34" cy="48" rx="30" ry="54" fill="#e8d5b8" opacity="0.78" transform="rotate(144)" />
+        <ellipse cx="-34" cy="48" rx="28" ry="50" fill="#e8d5b8" opacity="0.8" transform="rotate(216)" />
+        <ellipse cx="-55" cy="-18" rx="30" ry="54" fill="#e8d5b8" opacity="0.82" transform="rotate(288)" />
+      </g>
+      <circle cx="200" cy="150" r="14" fill="var(--gold)" opacity="0.4" />
+      <circle cx="200" cy="150" r="6" fill="var(--gold)" opacity="0.7" />
+      <text x="20" y="282" fontFamily="var(--mono)" fontSize="9" letterSpacing="0.25em" fill="var(--mid)" opacity="0.5">002 · BLOOM</text>
+    </svg>
+  );
+}
+
+export function ArtSilence({ className }: Props) {
+  return (
+    <svg viewBox="0 0 400 300" className={className} preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="400" height="300" fill="var(--gold-pale)" />
+      <g fill="none" stroke="var(--stone)" transform="translate(200 150)">
+        <circle r="22" strokeWidth="1.4" opacity="0.95" />
+        <circle r="50" strokeWidth="1.2" opacity="0.7" />
+        <circle r="82" strokeWidth="1" opacity="0.5" />
+        <circle r="118" strokeWidth="0.9" opacity="0.32" />
+        <circle r="158" strokeWidth="0.8" opacity="0.18" />
+      </g>
+      <circle cx="200" cy="150" r="3" fill="var(--gold)" opacity="0.7" />
+      <text x="20" y="282" fontFamily="var(--mono)" fontSize="9" letterSpacing="0.25em" fill="var(--mid)" opacity="0.5">003 · SILENCE</text>
+    </svg>
+  );
+}
+
+export function ArtArgan({ className }: Props) {
+  return (
+    <svg viewBox="0 0 400 300" className={className} preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="400" height="300" fill="var(--gold-pale)" />
+      <path d="M 175 60 C 240 60 270 130 270 180 C 270 235 235 260 195 260 C 150 260 120 232 120 180 C 120 130 145 60 195 60 Z"
+            fill="#f0e1c4" stroke="var(--gold)" strokeWidth="1" opacity="0.85" />
+      <path d="M 195 130 C 220 130 232 160 232 185 C 232 215 215 228 198 228 C 175 228 162 212 162 185 C 162 160 172 130 195 130 Z"
+            fill="var(--gold)" opacity="0.35" />
+      <text x="20" y="282" fontFamily="var(--mono)" fontSize="9" letterSpacing="0.25em" fill="var(--mid)" opacity="0.5">004 · ARGAN</text>
+    </svg>
+  );
+}
+
+export function ArtSalt({ className }: Props) {
+  return (
+    <svg viewBox="0 0 400 300" className={className} preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="400" height="300" fill="var(--sage)" />
+      <g stroke="var(--stone)" strokeWidth="0.8" opacity="0.7">
+        <polygon points="120,90 175,70 210,120 175,170 110,150" fill="#c8c0b4" />
+        <polygon points="210,120 270,100 290,160 240,200 175,170" fill="#b5ada1" />
+        <polygon points="175,170 240,200 220,250 150,240 110,200" fill="var(--gold)" fillOpacity="0.18" />
+        <polygon points="290,160 320,210 270,250 240,200" fill="#a8a094" />
+        <polygon points="110,150 110,200 60,180 80,120" fill="#bdb6aa" />
+      </g>
+      <text x="20" y="282" fontFamily="var(--mono)" fontSize="9" letterSpacing="0.25em" fill="var(--mid)" opacity="0.5">005 · SALT</text>
+    </svg>
+  );
+}
+
+export function ArtGuaSha({ className }: Props) {
+  return (
+    <svg viewBox="0 0 400 300" className={className} preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="400" height="300" fill="var(--bg3)" />
+      <g fill="none" stroke="var(--gold)" strokeWidth="0.8" opacity="0.4">
+        <path d="M 60 110 Q 200 60 340 110" />
+        <path d="M 60 150 Q 200 100 340 150" />
+        <path d="M 60 190 Q 200 140 340 190" />
+      </g>
+      <path d="M 110 200 Q 110 150 200 145 Q 295 140 295 175 Q 295 215 200 220 Q 110 225 110 200 Z"
+            fill="#d4ddd0" stroke="var(--gold)" strokeWidth="1" opacity="0.95" />
+      <path d="M 130 195 Q 200 175 280 185" stroke="var(--mid)" strokeWidth="0.5" fill="none" opacity="0.4" />
+      <text x="20" y="282" fontFamily="var(--mono)" fontSize="9" letterSpacing="0.25em" fill="var(--mid)" opacity="0.5">006 · GUA SHA</text>
+    </svg>
+  );
+}
+
+export const TREATMENT_ART = {
+  "01": ArtStone,
+  "02": ArtBloom,
+  "03": ArtSilence,
+  "04": ArtArgan,
+  "05": ArtSalt,
+  "06": ArtGuaSha,
+} as const;
